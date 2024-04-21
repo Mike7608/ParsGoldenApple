@@ -1,6 +1,6 @@
 # Основные настройки программы
-START_PAGE = 25
-END_PAGE = 30
+START_PAGE = 1
+END_PAGE = 500
 CODE_PAGE ='utf-8'
 URL_MAIN = "https://goldapple.ru"
 URL_RATE = '/review/product'
