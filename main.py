@@ -58,7 +58,7 @@ def get_all_items():
             # после окончания цикла передаем все данные для записи в файл
             pga.save_data(data, page)
 
-            print_info(f'Данные страницы {page} сохранены успешно!')
+            print_info(f'Данные страницы {page} сохранены в файл {settings.FILE_NAME + "-" + str(page) + settings.FILE_EXT} успешно!')
 
             sec = services.random_seconds(settings.TIME_LIMIT_PAGE)
             print_info(f"Ждем {round(sec)} секунд")
@@ -66,6 +66,8 @@ def get_all_items():
         else:
             print_info("Нет данных!")
             break
+
+    print_info('Все заданные страницы выбраны! Программа завершила работу.')
 
 
 def main():
