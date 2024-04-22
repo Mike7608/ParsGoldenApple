@@ -8,7 +8,7 @@ import time
 
 
 class ParsGoldApple:
-    """ Класс для парсинга сайта """
+    """ Класс для парсинга сайта GoldApple"""
 
     @staticmethod
     def get_catalog_links(catalog: str, page=1):
@@ -36,7 +36,7 @@ class ParsGoldApple:
     @staticmethod
     def get_data_item(url: str):
         """
-        Функция возвращает полученные данные в требуемом виде
+        Функция возвращает словарь с данными одной записи в требуемом виде
         :param url: Ссылка на запись
         :return: Словарь с данными
         """
@@ -56,7 +56,7 @@ class ParsGoldApple:
     @staticmethod
     def save_data(data: list, page: int):
         """
-        Сохранить данные в CSV формате
+        Создает файл с данными выбранной страницы в CSV формате
         :param page: номер страницы для названия файла
         :param data: данные для записи
         :return: файл CSV с данными
@@ -66,3 +66,4 @@ class ParsGoldApple:
             writer = csv.DictWriter(file, fieldnames=settings.FIELDS_NAME, delimiter='|')
             writer.writeheader()
             writer.writerows(data)
+
